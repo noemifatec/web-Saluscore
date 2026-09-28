@@ -1,0 +1,19 @@
+.carouselContainer {
+  width: 100%;
+  overflow: visible;
+}
+
+.swiper {
+  overflow: visible !important;
+}
+
+.card {
+  width: 100%;
+  height: 380px;
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+  color: #ffffff;
+}
