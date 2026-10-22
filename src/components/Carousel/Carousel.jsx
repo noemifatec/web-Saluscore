@@ -14,8 +14,8 @@ export default function Carousel({ items = [] }) {
     <div className={styles.carouselContainer}>
       <Swiper
         modules={[Navigation, Pagination, Autoplay]}
-        spaceBetween={20}
-        slidesPerView={1.2}
+        spaceBetween={30}
+        slidesPerView={1.15}
         navigation
         pagination={{ clickable: true }}
         loop={true}

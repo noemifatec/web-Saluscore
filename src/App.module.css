@@ -8,76 +8,35 @@
 }
 
 .hero {
-  position: relative;
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr 1.2fr; /* Coluna da esquerda e coluna da direita */
   align-items: center;
   padding: 4rem 3rem;
   max-width: 1300px;
   margin: 0 auto;
-  gap: 2rem;
-  z-index: 2;
-}
-
-/* Quadrados decorativos no fundo */
-.bgSquare1,
-.bgSquare2,
-.bgSquare3,
-.bgSquare4 {
-  position: absolute;
-  background: rgba(255, 255, 255, 0.05);
-  backdrop-filter: blur(5px);
-  border-radius: 16px;
-  z-index: 1;
-}
-
-.bgSquare1 {
-  width: 100px;
-  height: 100px;
-  top: 15%;
-  left: 5%;
-}
-
-.bgSquare2 {
-  width: 120px;
-  height: 120px;
-  bottom: 10%;
-  left: 20%;
-}
-
-.bgSquare3 {
-  width: 140px;
-  height: 140px;
-  top: 10%;
-  right: 25%;
-}
-
-.bgSquare4 {
-  width: 110px;
-  height: 110px;
-  bottom: 15%;
-  right: 15%;
+  gap: 3rem;
+  overflow: hidden; /* Impede que o carrossel crie barra de rolagem na página */
 }
 
 .heroContent {
   display: flex;
   flex-direction: column;
-  gap: 0.6 rem;
-  max-width: 500px;
+  gap: 1rem;
 }
 
 .tagline {
-  font-size: 0.85rem;
+  font-size: 0.8rem;
   letter-spacing: 2px;
-  color: #a0a5c0;
+  color: #8c93b3;
   font-weight: 600;
   text-transform: uppercase;
 }
 
 .title {
   font-size: 3.2rem;
-  line-height: 1.1;
+  line-height: 1.15;
   font-weight: 800;
+  margin: 0;
 }
 
 .blueText {
@@ -85,22 +44,27 @@
   display: block;
 }
 
-.description{
-  font-family: 'Inter', sans-serif;
-  font-weight: 400;
-  font-size: 36px;
-  line-height: 33px;
-  letter-spacing: 0px;
-  text-align: left;
-  color: #FFFFFF;
+.description {
+  font-size: 1.15rem;
+  line-height: 1.5;
+  color: #b0b7d0;
+  max-width: 480px;
+  margin-top: 0.5rem;
+  font-weight: 500; /* Garante que a espessura da fonte volte ao normal */
+  font-family: inherit; /* Mantém a mesma fonte padrão do resto da página */
 }
 
 .carouselSection {
   width: 100%;
+  min-width: 0; /* CRUCIAL: impede que o CSS Grid expanda indefinidamente com o Swiper */
+  position: relative;
 }
 
-@media (max-width: 900px) {
+/* Responsivo para telemóveis/tablets */
+@media (max-width: 960px) {
   .hero {
     grid-template-columns: 1fr;
+    padding: 2rem 1.5rem;
+    gap: 2rem;
   }
 }
