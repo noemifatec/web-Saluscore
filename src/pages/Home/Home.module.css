@@ -2,13 +2,17 @@
   position: relative;
   display: grid;
   grid-template-columns: 1fr 1fr;
-  align-items: center;
+  align-items: stretch;
+  flex: 1;
+  width: 100%;
+  box-sizing: border-box;
   padding: 4rem 3rem;
   max-width: 1300px;
   margin: 0 auto;
   gap: 2rem;
   z-index: 2;
 }
+ /*position:relative e z-index:2 (para os quadradinhos ficarem atrás do texto)*/
 
 .heroContent {
   display: flex;
