@@ -1,0 +1,71 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.page {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  background-color: #06022e;
+}
+
+/* NAVBAR */
+.navbar {
+  width: 100%;
+  height: 70px;
+  flex-shrink: 0;
+  background-color: #151044;
+  color: white;
+
+  display: flex;
+  align-items: center;
+  padding: 0 30px;
+}
+
+/* CONTEÚDO PRINCIPAL */
+.mainContent {
+  flex: 1;
+  min-height: 0;
+  width: 100%;
+
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+
+  padding: 20px;
+}
+
+/* COLUNA DE TEXTO */
+.textColumn {
+  min-width: 0;
+  overflow-y: auto;
+  color: white;
+  padding: 20px;
+}
+
+/* COLUNA DO CARROSSEL */
+.carouselColumn {
+  min-width: 0;
+  min-height: 0;
+  overflow: hidden;
+  background-color: #151044;
+  border-radius: 12px;
+  color: white;
+}
+
+/* FOOTER */
+.footer {
+  width: 100%;
+  height: 60px;
+  flex-shrink: 0;
+  background-color: #151044;
+  color: white;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

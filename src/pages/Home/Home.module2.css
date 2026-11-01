@@ -1,0 +1,65 @@
+.hero {
+  position: relative;
+  display: grid;
+  grid-template-columns: 1fr 1.2fr; /* Dá um pouco mais de proporção para o carrossel */
+  align-items: center;
+  padding: 3rem 4vw; /* Padding lateral fluido (em porcentagem) para se adaptar perfeitamente a notebooks */
+  max-width: 1560px; /* Aumenta o limite máximo para aproveitar telas grandes */
+  width: 100%;
+  margin: 0 auto;
+  gap: 3rem;
+  z-index: 2;
+  box-sizing: border-box;
+}
+
+.heroContent {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+  max-width: 550px; /* Permite que o texto cresça um pouco mais confortavelmente */
+}
+
+.tagline {
+  font-size: 0.85rem;
+  letter-spacing: 2px;
+  color: #a0a5c0;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.title {
+  font-size: 3.2rem;
+  line-height: 1.1;
+  font-weight: 800;
+}
+
+.blueText {
+  color: #1d6bf3;
+  display: block;
+}
+
+.description {
+  line-height: 1.5;
+  color: #c0c5e0;
+  font-weight: 600;
+  font-size: 1.35rem; /* Ajustado para um tamanho harmônico */
+}
+
+.carouselSection {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+@media (max-width: 1024px) {
+  .hero {
+    grid-template-columns: 1fr;
+    text-align: center;
+    padding: 3rem 2rem;
+  }
+  
+  .heroContent {
+    max-width: 100%;
+    align-items: center;
+  }
+}
